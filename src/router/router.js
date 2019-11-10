@@ -1,4 +1,3 @@
-/* eslint-disable */
 import Router from 'vue-router'
 
 import routes from './routes'
@@ -14,10 +13,10 @@ import routes from './routes'
 export default () => {
   return new Router({
     routes,
-    mode: 'history', // mode 有两种参数，一个是默认的哈希 # ，一个是 history。默认是哈希路由，但哈希更多情况下是用来做定位的，而不是做路由状态的记录。同时哈希路由不会被搜索引擎解析，影响网站SEO。history路由形式不带 #。
-    // base: '/base/', // 在 routes 中所有配置路由的 path 前添加 /base/，这个路径作为所有应用的基路径。在应用中不论是用 route-link 还是 route 对象跳转，只要是通过 vue router 的 api 跳转，都会加上此基路径。但是把路径中 /base/ 手动去掉，仍然会显示，所有 base 不是强制性的。在区分页面路径和其他类型路径的时候会用到，不常用。
-    linkActiveClass: 'active-link', // 配置 route-link 链接 class，路径不完全匹配时添加 class 为 linkActiveClass
-    linkExactActiveClass: 'exact-active-link', // 路径完全匹配时添加 class 为 linkExactActiveClaee linkActiveClass
+    mode: 'history', // mode 有两种参数，一个是默认的哈希 hash ，一个是 history。默认是哈希路由，但哈希更多情况下是用来做定位的，而不是做路由状态的记录。同时哈希路由不会被搜索引擎解析，影响网站SEO。history路由形式不带 #。
+    base: '/mybase/', // 在 routes 中所有配置路由的 path 前添加 /base/，这个路径作为所有应用的基路径。在应用中不论是用 route-link 还是 route 对象跳转，只要是通过 vue router 的 api 跳转，都会加上此基路径。但是把路径中 /base/ 手动去掉，仍然会显示，所有 base 不是强制性的。在区分页面路径和其他类型路径的时候会用到，不常用。
+    linkActiveClass: 'my-active-link', // 配置 route-link 链接 class，路径不完全匹配时添加 class 为 linkActiveClass
+    linkExactActiveClass: 'my-exact-active-link', // 路径完全匹配时添加 class 为 linkExactActiveClaee linkActiveClass
     scrollBehavior (to, from, savePosition) { // 页面跳转时是否需要滚动
       // to 去往路由 from 来时路由 savePosition 记录滚动条位置
       // to from savaPosition 都是对象

@@ -1,3 +1,7 @@
+# 文档
+
+[《1小时 Vue Router 从入门到放弃》](https://www.jianshu.com/p/5ca695573912)
+
 # vue-router
 
 ## Project setup
